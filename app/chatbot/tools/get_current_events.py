@@ -13,30 +13,6 @@ class GetCurrentEventsInput(BaseModel):
     category: Optional[str] = Field(description="The category of events to get")
 
 
-# @tool("get-current-events-tool", args_schema=GetCurrentEventsInput, return_direct=True)
-# def get_current_events(input: GetCurrentEventsInput):
-#     """Get the current events"""
-#     return {
-#         "events": [
-#             {
-#                 "title": "Event 1",
-#                 "description": "This is the first event",
-#                 "date": "2021-01-01",
-#             },
-#             {
-#                 "title": "Event 2",
-#                 "description": "This is the second event",
-#                 "date": "2021-01-02",
-#             },
-#         ]
-#     }
-
-
-# print(get_current_events.name)
-# print(get_current_events.description)
-# print(get_current_events.args)
-
-
 class GetCurrentEventsTool(BaseTool):
     name: str = "Get Current Events"
     description: str = "use this tool to get the current events"

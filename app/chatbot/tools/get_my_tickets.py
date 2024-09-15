@@ -13,20 +13,6 @@ class GetMyTicketsInput(BaseModel):
     user_id: str = Field(description="The user ID to get tickets for")
 
 
-# @tool("get-my-tickets-tool", args_schema=GetMyTicketsInput, return_direct=True)
-# def get_my_tickets(input: GetMyTicketsInput):
-#     """Get the tickets that the user has"""
-#     return {
-#         "tickets": [
-#             {
-#                 "title": "Ticket 1",
-#                 "description": "This is the first ticket",
-#                 "date": "2021-01-01"
-#             }
-#         ]
-#     }
-
-
 class GetMyTicketsTool(BaseTool):
     name: str = "Get My Tickets"
     description: str = "use this tool to get the tickets that the user has"
