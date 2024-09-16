@@ -1,0 +1,23 @@
+FROM python:3.11-slim
+
+WORKDIR /code
+
+# Copy only requirements first to leverage Docker cache
+COPY ./requirements.txt ./
+
+# Install dependencies
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+# Remove "data" folder if it exists
+RUN rm -rf ./app/data
+
+# Copy the rest of the application code
+COPY ./app ./app
+
+# Copy the main file
+COPY ./app.py ./
+
+# Install FastAPI separately to leverage Docker cache
+RUN pip install "fastapi[standard]"
+
+CMD ["fastapi", "dev", "main.py", "--port", "8080", '--host', '0.0.0.0']

@@ -1,0 +1,5 @@
+{
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/luthfiarifin/Documents/Project/tikeetron/tikeetron_ai/.github/workflows/deploy.yaml"
+    }
+}
