@@ -1,5 +1,5 @@
 # requirements.in
-fastapi[standard]==0.112.1
+fastapi==0.112.1
 langchain==0.3.0
 langchain-groq==0.2.0
 python-dotenv==1.0.1
