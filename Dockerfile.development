@@ -8,6 +8,9 @@ COPY ./requirements.txt ./
 # Copy the main file
 COPY ./main.py ./
 
+# Install FastAPI separately to leverage Docker cache
+RUN pip install "fastapi[standard]"
+
 # Install dependencies
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
