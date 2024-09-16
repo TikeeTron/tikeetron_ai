@@ -1,9 +1,7 @@
 import os
 
-# from langchain import hub
 from dotenv import load_dotenv
 
-# from langchain.agents import  AgentExecutor
 from langchain_groq import ChatGroq
 from langgraph.prebuilt import create_react_agent
 
