@@ -33,3 +33,26 @@ agent = create_react_agent(
     llm,
     tools,
 )
+
+
+def ask_agent(messages):
+    response = agent.invoke(
+        {
+            "messages": [
+                (
+                    "system",
+                    "You are the Tikeetron Bot, designed to assist users with questions about events. Ensure that your responses are accurate and based on the provided passages.",
+                ),
+                (
+                    "human",
+                    messages,
+                ),
+            ],
+        },
+    )
+
+    message = response["messages"][-1]
+    if message != None:
+        return message.content
+    else:
+        return "No response"
