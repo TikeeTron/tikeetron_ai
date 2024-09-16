@@ -1,12 +1,11 @@
 from typing import Optional, Type
 
-from langchain.pydantic_v1 import BaseModel
 from langchain_core.callbacks import (
     AsyncCallbackManagerForToolRun,
     CallbackManagerForToolRun,
 )
 from langchain_core.tools import BaseTool
-from pydantic import Field
+from pydantic import Field, BaseModel
 
 
 class GetMyTicketsInput(BaseModel):

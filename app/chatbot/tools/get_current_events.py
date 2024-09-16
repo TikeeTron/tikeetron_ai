@@ -1,22 +1,22 @@
 from typing import Optional, Type
-
-from langchain.pydantic_v1 import BaseModel
 from langchain_core.callbacks import (
     AsyncCallbackManagerForToolRun,
     CallbackManagerForToolRun,
 )
 from langchain_core.tools import BaseTool
-from pydantic import Field
+from pydantic import Field, BaseModel
 
 
 class GetCurrentEventsInput(BaseModel):
-    category: Optional[str] = Field(description="The category of events to get")
+    category: Optional[str] = Field(
+        description="category of events, e.g. sports, music"
+    )
 
 
 class GetCurrentEventsTool(BaseTool):
     name: str = "Get Current Events"
     description: str = "use this tool to get the current events"
-    args_schema: Type[BaseModel] = GetCurrentEventsInput
+    args_schema: Type[GetCurrentEventsInput] = GetCurrentEventsInput
     return_direct: bool = True
 
     def _run(
@@ -41,7 +41,7 @@ class GetCurrentEventsTool(BaseTool):
             ]
         }
 
-    def _arun(
+    async def _arun(
         self,
         input: GetCurrentEventsInput,
         run_manager: Optional[AsyncCallbackManagerForToolRun] = None,
