@@ -21,4 +21,4 @@ COPY ./app ./app
 # Install FastAPI separately to leverage Docker cache
 RUN pip install "fastapi[standard]"
 
-CMD ["fastapi", "dev", "main.py", "--port", "8080", '--host', '0.0.0.0']
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
