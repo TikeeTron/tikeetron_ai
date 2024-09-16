@@ -1,50 +1,85 @@
-from typing import Optional, Type
-from langchain_core.callbacks import (
-    AsyncCallbackManagerForToolRun,
-    CallbackManagerForToolRun,
+import os
+
+from langchain_community.vectorstores import MongoDBAtlasVectorSearch
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_groq import ChatGroq
+
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.prompts import format_document, PromptTemplate
+from langchain_core.runnables import RunnablePassthrough
+
+from app.chatbot.prompt.base_prompt import DOCUMENT_PROMPT
+
+system_prompt = """
+Use the event data below to answer the user’s question. Cite the source of the event data in your response.
+
+If the answer isn't available, simply state that you don't know.
+
+## Question: 
+{question}
+
+## Context: 
+{context}
+"""
+
+# prompt = ChatPromptTemplate.from_messages([("system", system_prompt)])
+prompt = PromptTemplate(
+    template=system_prompt,
+    input_variables=["context", "question"],
 )
-from langchain_core.tools import BaseTool
-from pydantic import Field, BaseModel
 
+vectorstore = MongoDBAtlasVectorSearch.from_connection_string(
+    os.environ["MONGO_URI"],
+    os.environ["MONGO_DB_NAME"] + "." + os.environ["MONGO_COLLECTION_EVENTS"],
+    HuggingFaceEmbeddings(
+        model_name="all-MiniLM-L6-v2",
+        model_kwargs={"device": "cpu"},
+    ),
+    index_name=os.environ["MONGO_VECTOR_INDEX_EVENTS"],
+)
 
-class GetCurrentEventsInput(BaseModel):
-    category: Optional[str] = Field(
-        description="category of events, e.g. sports, music"
-    )
-
-
-class GetCurrentEventsTool(BaseTool):
-    name: str = "Get Current Events"
-    description: str = "use this tool to get the current events"
-    args_schema: Type[GetCurrentEventsInput] = GetCurrentEventsInput
-    return_direct: bool = True
-
-    def _run(
-        self,
-        input: GetCurrentEventsInput,
-        run_manager: Optional[CallbackManagerForToolRun] = None,
-    ):
-        """Use the tool."""
-        print(input)
-        return {
-            "events": [
-                {
-                    "title": "Event 1",
-                    "description": "This is the first event",
-                    "date": "2021-01-01",
-                },
-                {
-                    "title": "Event 2",
-                    "description": "This is the second event",
-                    "date": "2021-01-02",
-                },
+retriever = vectorstore.as_retriever(
+    search_type="mmr",
+    search_kwargs={
+        "k": 4,
+        "filters": {
+            "$or": [
+                {"start_date": {"$gte": "now"}},
+                {"end_date": {"$gte": "now"}},
             ]
-        }
+        },
+        "lambda_mult": 0,
+    },
+)
 
-    async def _arun(
-        self,
-        input: GetCurrentEventsInput,
-        run_manager: Optional[AsyncCallbackManagerForToolRun] = None,
-    ):
-        """Use the tool asynchronously."""
-        return self._run(input, run_manager=run_manager.get_sync())
+llm = ChatGroq(
+    model="llama3-70b-8192",
+    temperature=0,
+    max_retries=1,
+    api_key=os.getenv("GROQ_API_KEY"),
+    verbose=True,
+)
+
+
+def _combine_documents(
+    docs, document_prompt=DOCUMENT_PROMPT, document_separator="\n\n"
+):
+    doc_strings = [format_document(doc, document_prompt) for doc in docs]
+    print(document_separator.join(doc_strings))
+    return document_separator.join(doc_strings)
+
+
+rag_chain = (
+    {
+        "context": retriever | _combine_documents,
+        "question": RunnablePassthrough(),
+    }
+    | prompt
+    | llm
+    | StrOutputParser()
+)
+
+get_current_event_tool = rag_chain.as_tool(
+    name="Get Current Events",
+    description="use this tool to get the current events, this tool is used vector search to find current events based on the query",
+)

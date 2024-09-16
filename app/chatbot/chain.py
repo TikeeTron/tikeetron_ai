@@ -1,18 +1,21 @@
 import os
-from langchain import hub
-from dotenv import load_dotenv
-from langchain.agents import create_react_agent, AgentExecutor
-from langchain_groq import ChatGroq
 
-from tools.get_tikeetron import get_tikeetron_tool
-from tools.get_my_tickets import GetMyTicketsTool
-from tools.get_current_events import GetCurrentEventsTool
+# from langchain import hub
+from dotenv import load_dotenv
+
+# from langchain.agents import  AgentExecutor
+from langchain_groq import ChatGroq
+from langgraph.prebuilt import create_react_agent
+
+from app.chatbot.tools.get_tikeetron import get_tikeetron_tool
+from app.chatbot.tools.get_my_tickets import GetMyTicketsTool
+from app.chatbot.tools.get_current_events import get_current_event_tool
 
 load_dotenv()
 
 tools = [
-    GetCurrentEventsTool(),
     GetMyTicketsTool(),
+    get_current_event_tool,
     get_tikeetron_tool,
 ]
 
@@ -27,10 +30,6 @@ llm = ChatGroq(
 )
 
 agent = create_react_agent(
-    tools=tools,
-    llm=llm,
-    prompt=hub.pull("hwchase17/react"),
+    llm,
+    tools,
 )
-agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
-
-agent_executor.invoke({"input": "what is tikeetron?"})
