@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from langchain.agents import create_react_agent, AgentExecutor
 from langchain_groq import ChatGroq
 
-from tools.get_tikeetron import GetTikeetronTool, get_tikeetron_tool
+from tools.get_tikeetron import get_tikeetron_tool
 from tools.get_my_tickets import GetMyTicketsTool
 from tools.get_current_events import GetCurrentEventsTool
 
