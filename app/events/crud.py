@@ -1,9 +1,20 @@
 import os
 
+from dotenv import load_dotenv
+
 from bson import ObjectId
 from langchain_core import documents
 from langchain_community.vectorstores import MongoDBAtlasVectorSearch
 from langchain_huggingface import HuggingFaceEmbeddings
+from pymongo import MongoClient
+
+load_dotenv()
+
+DB_NAME = os.getenv("MONGO_API_DB_NAME")
+COLLECTION_NAME = "events"
+client = MongoClient(os.getenv("MONGO_URI"))
+db = client[DB_NAME]
+eventCollections = db[COLLECTION_NAME]
 
 vectorstore = MongoDBAtlasVectorSearch.from_connection_string(
     os.environ["MONGO_URI"],
@@ -48,7 +59,9 @@ def update_event_vector(id: ObjectId, updatedFields):
     Update the event vector in the MongoDB Atlas database.
     """
 
-    return vectorstore._collection.update_one(
-        {"_id": id},
-        {"$set": updatedFields},
-    )
+    event = eventCollections.find_one({"_id": id})
+    updated_event = {**event, **updatedFields}
+
+    vectorstore._collection.delete_one({"_id": id})
+
+    return insert_event_vector(updated_event)
