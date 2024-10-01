@@ -20,6 +20,7 @@ MONGODB_COLLECTION = db[COLLECTION_NAME]
 def metadata_func(record: dict, metadata: dict) -> dict:
     tickets = record.get("tickets")
 
+    metadata["_id"] = record.get("_id")
     metadata["id"] = record.get("id")
     metadata["name"] = record.get("name")
     metadata["category"] = record.get("category")
