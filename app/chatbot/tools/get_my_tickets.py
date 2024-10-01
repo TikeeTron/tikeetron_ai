@@ -13,8 +13,8 @@ class GetMyTicketsInput(BaseModel):
 
 
 class GetMyTicketsTool(BaseTool):
-    name: str = "Get My Tickets"
-    description: str = "use this tool to get the tickets that the user has"
+    name: str = "get_my_tickets"
+    description: str = "use this tool to get the tickets that the user has, only call this tool if the user asks for their tickets"
     args_schema: Type[BaseModel] = GetMyTicketsInput
     return_direct: bool = True
 
