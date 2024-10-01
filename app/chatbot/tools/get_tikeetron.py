@@ -18,6 +18,6 @@ retriever = vectorstore.as_retriever()
 
 get_tikeetron_tool = create_retriever_tool(
     retriever=retriever,
-    name="Get to know Tikeetron",
-    description="use this tool to get a brief overview of Tikeetron, this tool is used vector search to find the most similar document to the query",
+    name="get_to_know_tikeetron",
+    description="use this tool to get a brief overview of Tikeetron, just use this tool to get to know Tikeetron",
 )
