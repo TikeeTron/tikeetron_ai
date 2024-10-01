@@ -1,5 +1,7 @@
+import json
 import os
 
+from bson import json_util
 from dotenv import load_dotenv
 
 from bson import ObjectId
@@ -72,5 +74,10 @@ def get_event_datas(events):
     """
     Get the event data from the MongoDB Atlas database.
     """
+    event_datas = []
     event_ids = [event.id for event in events]
-    return eventCollections.find({"_id": {"$in": event_ids}})
+
+    for event in eventCollections.find({"_id": {"$in": event_ids}}):
+        event_datas.append(event)
+
+    return json.loads(json_util.dumps(event_datas))
