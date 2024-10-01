@@ -11,9 +11,7 @@ from langchain_core.runnables import RunnablePassthrough
 from app.chatbot.prompt.base_prompt import DOCUMENT_PROMPT
 
 system_prompt = """
-Use the event data below to answer the user’s question. Cite the source of the event data in your response.
-
-If the answer isn't available, simply state that you don't know.
+Use the event data below to answer the user's question. Show id, name, and category. If no data is available, say, "No events found.". Do not ask for more clarification unless needed.
 
 ## Question: 
 {question}
@@ -39,16 +37,15 @@ vectorstore = MongoDBAtlasVectorSearch.from_connection_string(
 )
 
 retriever = vectorstore.as_retriever(
-    search_type="mmr",
+    search_type="similarity",
     search_kwargs={
-        "k": 4,
+        "k": 2,
         "filters": {
             "$or": [
                 {"start_date": {"$gte": "now"}},
                 {"end_date": {"$gte": "now"}},
             ]
         },
-        "lambda_mult": 0,
     },
 )
 
@@ -80,6 +77,6 @@ rag_chain = (
 )
 
 get_current_event_tool = rag_chain.as_tool(
-    name="Get Current Events",
+    name="get_events",
     description="use this tool to get the current events, this tool is used vector search to find current events based on the query",
 )
