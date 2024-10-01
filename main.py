@@ -6,5 +6,5 @@ app = FastAPI()
 
 
 @app.post("/ask")
-async def ask(param: AskParam) -> str:
+async def ask(param: AskParam):
     return ask_agent(param.question)
