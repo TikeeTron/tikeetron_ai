@@ -66,3 +66,11 @@ def update_event_vector(id: ObjectId, updatedFields):
     vectorstore._collection.delete_one({"_id": id})
 
     return insert_event_vector(updated_event)
+
+
+def get_event_datas(events):
+    """
+    Get the event data from the MongoDB Atlas database.
+    """
+    event_ids = [event.id for event in events]
+    return eventCollections.find({"_id": {"$in": event_ids}})
