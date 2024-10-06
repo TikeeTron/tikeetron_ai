@@ -1,10 +1,12 @@
 import os
 
-from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.vectorstores import MongoDBAtlasVectorSearch
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pymongo import MongoClient
+from langchain_text_splitters import MarkdownHeaderTextSplitter
+from langchain_community.document_loaders import UnstructuredMarkdownLoader
+from langchain_core.documents import Document
 
 MONGO_URI = os.environ["MONGO_URI"]
 
@@ -18,11 +20,11 @@ db = client[DB_NAME]
 MONGODB_COLLECTION = db[COLLECTION_NAME]
 
 if __name__ == "__main__":
-    loader = PyPDFLoader("app/data/tikeetron.pdf")
+    loader = UnstructuredMarkdownLoader("app/data/tikeetron.md", mode="elements")
     data = loader.load()
 
     # Split docs
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=250, chunk_overlap=30)
     docs = text_splitter.split_documents(data)
 
     # Insert the documents in MongoDB Atlas Vector Search
