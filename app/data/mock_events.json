@@ -1,569 +1,481 @@
 [
     {
-        "_id": "1",
-        "id": "1",
+        "eventId": 1,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Web Summit",
         "description": "One of the largest tech conferences in the world.",
         "category": "Conference",
-        "content": {
-            "id": "1",
-            "name": "Web Summit",
-            "description": "One of the largest tech conferences in the world.",
-            "category": "Conference"
-        },
-        "start_date": "2024-11-04",
-        "end_date": "2024-11-07",
+        "startDate": "2024-11-04T00:00:00.000Z",
+        "endDate": "2024-11-07T00:00:00.000Z",
         "location": "Lisbon, Portugal",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://www.expoexhibitionstands.com/wp-content/uploads/2024/05/web-summit-2024.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "General Admission",
                 "description": "Access to all stages and exhibitions.",
-                "price": 899,
-                "quantity": 5000,
-                "start_date": "2024-06-01",
-                "end_date": "2024-11-01",
-                "terms_and_conditions": "Non-refundable. Transferable until one week before the event."
+                "price": 899000000,
+                "capacity": 5000,
+                "startDate": "2024-06-01T00:00:00.000Z",
+                "endDate": "2024-11-01T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "VIP Ticket",
                 "description": "Includes VIP seating and networking sessions.",
-                "price": 2499,
-                "quantity": 500,
-                "start_date": "2024-06-01",
-                "end_date": "2024-11-01",
-                "terms_and_conditions": "Non-refundable. Transferable until one week before the event."
+                "price": 2499000000,
+                "capacity": 500,
+                "startDate": "2024-06-01T00:00:00.000Z",
+                "endDate": "2024-11-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "2",
-        "id": "2",
+        "eventId": 2,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Tomorrowland",
         "description": "The world’s biggest electronic music festival.",
         "category": "Music",
-        "content": {
-            "id": "2",
-            "name": "Tomorrowland",
-            "description": "The world’s biggest electronic music festival.",
-            "category": "Music"
-        },
-        "start_date": "2025-07-18",
-        "end_date": "2025-07-20",
+        "startDate": "2025-07-18T00:00:00.000Z",
+        "endDate": "2025-07-20T00:00:00.000Z",
         "location": "Boom, Belgium",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://cdn.uc.assets.prezly.com/fe193220-6aa9-47fa-83bc-51d0d5d12e49/-/resize/1108x/-/quality/best/-/format/auto/",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Full Madness Pass",
                 "description": "Access to the entire 3-day festival.",
-                "price": 325,
-                "quantity": 10000,
-                "start_date": "2024-11-15",
-                "end_date": "2025-07-15",
-                "terms_and_conditions": "Refundable until June 1, 2025."
+                "price": 325000000,
+                "capacity": 10000,
+                "startDate": "2024-11-15T00:00:00.000Z",
+                "endDate": "2025-07-15T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Comfort Pass",
                 "description": "Access to comfort zones (exclusive areas).",
-                "price": 495,
-                "quantity": 2000,
-                "start_date": "2024-11-15",
-                "end_date": "2025-07-15",
-                "terms_and_conditions": "Refundable until June 1, 2025."
+                "price": 495000000,
+                "capacity": 2000,
+                "startDate": "2024-11-15T00:00:00.000Z",
+                "endDate": "2025-07-15T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "3",
-        "id": "3",
+        "eventId": 3,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Comic-Con San Diego",
         "description": "The largest convention of comics, movies, and pop culture.",
         "category": "Entertainment",
-        "content": {
-            "id": "3",
-            "name": "Comic-Con San Diego",
-            "description": "The largest convention of comics, movies, and pop culture.",
-            "category": "Entertainment"
-        },
-        "start_date": "2025-07-24",
-        "end_date": "2025-07-27",
+        "startDate": "2025-07-24T00:00:00.000Z",
+        "endDate": "2025-07-27T00:00:00.000Z",
         "location": "San Diego, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://www.siliconvalley.com/wp-content/uploads/2024/07/SUT-L-Comic-Con-2023-03.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "4-Day Pass",
                 "description": "Access to all days and exclusive panels.",
-                "price": 350,
-                "quantity": 2000,
-                "start_date": "2024-12-01",
-                "end_date": "2025-07-23",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 350000000,
+                "capacity": 2000,
+                "startDate": "2024-12-01T00:00:00.000Z",
+                "endDate": "2025-07-23T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Single-Day Pass",
                 "description": "Access to one day of the event.",
-                "price": 85,
-                "quantity": 5000,
-                "start_date": "2024-12-01",
-                "end_date": "2025-07-23",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 85000000,
+                "capacity": 5000,
+                "startDate": "2024-12-01T00:00:00.000Z",
+                "endDate": "2025-07-23T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "4",
-        "id": "4",
+        "eventId": 4,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "SXSW (South by Southwest)",
         "description": "Annual conglomeration of film, interactive media, and music festivals.",
         "category": "Festival",
-        "content": {
-            "id": "4",
-            "name": "SXSW",
-            "description": "Annual conglomeration of film, interactive media, and music festivals.",
-            "category": "Festival"
-        },
-        "start_date": "2025-03-07",
-        "end_date": "2025-03-16",
+        "startDate": "2025-03-07T00:00:00.000Z",
+        "endDate": "2025-03-16T00:00:00.000Z",
         "location": "Austin, Texas, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://cdn.royist.com/wp-content/uploads/2018/03/south-by-south-west2.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Interactive Badge",
                 "description": "Access to the interactive festival events.",
-                "price": 1250,
-                "quantity": 1000,
-                "start_date": "2024-09-01",
-                "end_date": "2025-03-06",
-                "terms_and_conditions": "Non-refundable, transferable up to 1 week before the event."
+                "price": 1250000000,
+                "capacity": 1000,
+                "startDate": "2024-09-01T00:00:00.000Z",
+                "endDate": "2025-03-06T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Music Badge",
                 "description": "Access to all music performances.",
-                "price": 850,
-                "quantity": 3000,
-                "start_date": "2024-09-01",
-                "end_date": "2025-03-06",
-                "terms_and_conditions": "Non-refundable, transferable up to 1 week before the event."
+                "price": 850000000,
+                "capacity": 3000,
+                "startDate": "2024-09-01T00:00:00.000Z",
+                "endDate": "2025-03-06T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "5",
-        "id": "5",
+        "eventId": 5,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Coachella Valley Music and Arts Festival",
         "description": "One of the biggest music and arts festivals in the world.",
         "category": "Music",
-        "content": {
-            "id": "5",
-            "name": "Coachella",
-            "description": "One of the biggest music and arts festivals in the world.",
-            "category": "Music"
-        },
-        "start_date": "2025-04-11",
-        "end_date": "2025-04-20",
+        "startDate": "2025-04-11T00:00:00.000Z",
+        "endDate": "2025-04-20T00:00:00.000Z",
         "location": "Indio, California, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://media.pitchfork.com/photos/5df07bc086d8e90008993d22/2:1/w_2560%2Cc_limit/Coachella.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "General Admission",
                 "description": "Access to all stages and exhibitions.",
-                "price": 429,
-                "quantity": 125000,
-                "start_date": "2024-10-01",
-                "end_date": "2025-04-01",
-                "terms_and_conditions": "Non-refundable. Transferable until March 1, 2025."
+                "price": 429000000,
+                "capacity": 125000,
+                "startDate": "2024-10-01T00:00:00.000Z",
+                "endDate": "2025-04-01T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "VIP Pass",
                 "description": "Includes access to VIP areas and exclusive experiences.",
-                "price": 999,
-                "quantity": 5000,
-                "start_date": "2024-10-01",
-                "end_date": "2025-04-01",
-                "terms_and_conditions": "Non-refundable. Transferable until March 1, 2025."
+                "price": 999000000,
+                "capacity": 5000,
+                "startDate": "2024-10-01T00:00:00.000Z",
+                "endDate": "2025-04-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "6",
-        "id": "6",
+        "eventId": 6,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "The Met Gala",
         "description": "Annual fundraising gala for the Metropolitan Museum of Art's Costume Institute.",
         "category": "Fashion",
-        "content": {
-            "id": "6",
-            "name": "The Met Gala",
-            "description": "Annual fundraising gala for the Metropolitan Museum of Art's Costume Institute.",
-            "category": "Fashion"
-        },
-        "start_date": "2025-05-05",
-        "end_date": "2025-05-05",
+        "startDate": "2025-05-05T00:00:00.000Z",
+        "endDate": "2025-05-05T00:00:00.000Z",
         "location": "New York City, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://pyxis.nymag.com/v1/imgs/475/8dd/86b90cd181ee3187c849e9c9becc285c79-met-gala-carpet.rhorizontal.w1100.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Individual Ticket",
                 "description": "Exclusive admission to the Met Gala event.",
-                "price": 30000,
-                "quantity": 700,
-                "start_date": "2024-09-01",
-                "end_date": "2025-05-01",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 30000000000,
+                "capacity": 700,
+                "startDate": "2024-09-01T00:00:00.000Z",
+                "endDate": "2025-05-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "7",
-        "id": "7",
+        "eventId": 7,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Cannes Film Festival",
         "description": "Annual film festival held in Cannes, France.",
         "category": "Film",
-        "content": {
-            "id": "7",
-            "name": "Cannes Film Festival",
-            "description": "Annual film festival held in Cannes, France.",
-            "category": "Film"
-        },
-        "start_date": "2025-05-13",
-        "end_date": "2025-05-24",
+        "startDate": "2025-05-13T00:00:00.000Z",
+        "endDate": "2025-05-24T00:00:00.000Z",
         "location": "Cannes, France",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://www.cannes-france.com/app/uploads/cannes-tourisme/2022/06/thumbs/palais-vue-sur-la-montee-des-marchespalaisdesfestival-1920x960.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Festival Pass",
                 "description": "Access to all film screenings and red carpet events.",
-                "price": 5000,
-                "quantity": 2000,
-                "start_date": "2024-12-01",
-                "end_date": "2025-05-10",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 5000000000,
+                "capacity": 2000,
+                "startDate": "2024-12-01T00:00:00.000Z",
+                "endDate": "2025-05-10T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "8",
-        "id": "8",
+        "eventId": 8,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Wimbledon Tennis Championships",
         "description": "The oldest and most prestigious tennis tournament in the world.",
         "category": "Sports",
-        "content": {
-            "id": "8",
-            "name": "Wimbledon",
-            "description": "The oldest and most prestigious tennis tournament in the world.",
-            "category": "Sports"
-        },
-        "start_date": "2025-06-30",
-        "end_date": "2025-07-13",
+        "startDate": "2025-06-30T00:00:00.000Z",
+        "endDate": "2025-07-13T00:00:00.000Z",
         "location": "London, UK",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://chippenhamhospitalradio.com/sites/default/files/2021-06/wimbledon-tennis-championship-780x470.png",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Centre Court Ticket",
                 "description": "Access to Centre Court matches.",
-                "price": 250,
-                "quantity": 15000,
-                "start_date": "2025-01-01",
-                "end_date": "2025-06-01",
-                "terms_and_conditions": "Non-refundable after June 1, 2025."
+                "price": 250000000,
+                "capacity": 15000,
+                "startDate": "2025-01-01T00:00:00.000Z",
+                "endDate": "2025-06-01T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Ground Pass",
                 "description": "Access to the grounds and outside courts.",
-                "price": 80,
-                "quantity": 10000,
-                "start_date": "2025-01-01",
-                "end_date": "2025-06-01",
-                "terms_and_conditions": "Non-refundable after June 1, 2025."
+                "price": 80000000,
+                "capacity": 10000,
+                "startDate": "2025-01-01T00:00:00.000Z",
+                "endDate": "2025-06-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "9",
-        "id": "9",
+        "eventId": 9,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Oktoberfest",
         "description": "The world's largest Volksfest, combining a beer festival and a traveling funfair.",
         "category": "Festival",
-        "content": {
-            "id": "9",
-            "name": "Oktoberfest",
-            "description": "The world's largest Volksfest, combining a beer festival and a traveling funfair.",
-            "category": "Festival"
-        },
-        "start_date": "2025-09-20",
-        "end_date": "2025-10-06",
+        "startDate": "2025-09-20T00:00:00.000Z",
+        "endDate": "2025-10-06T00:00:00.000Z",
         "location": "Munich, Germany",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/O%27zapft_is%21_M%C3%BCnchens_5_Jahreszeit_hat_begonnen_-_O%27zapft_is%21_Munich_5_season%2C_the_Oktoberfest_has_begun_%289855483374%29.jpg/800px-O%27zapft_is%21_M%C3%BCnchens_5_Jahreszeit_hat_begonnen_-_O%27zapft_is%21_Munich_5_season%2C_the_Oktoberfest_has_begun_%289855483374%29.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Beer Tent Reservation",
                 "description": "Guaranteed seating in one of the large beer tents.",
-                "price": 45,
-                "quantity": 100000,
-                "start_date": "2025-03-01",
-                "end_date": "2025-09-01",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 45000000,
+                "capacity": 100000,
+                "startDate": "2025-03-01T00:00:00.000Z",
+                "endDate": "2025-09-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "10",
-        "id": "10",
+        "eventId": 10,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "New York Fashion Week",
         "description": "One of the major fashion weeks held globally, showcasing upcoming fashion trends.",
         "category": "Fashion",
-        "content": {
-            "id": "10",
-            "name": "New York Fashion Week",
-            "description": "One of the major fashion weeks held globally, showcasing upcoming fashion trends.",
-            "category": "Fashion"
-        },
-        "start_date": "2025-09-05",
-        "end_date": "2025-09-13",
+        "startDate": "2025-09-05T00:00:00.000Z",
+        "endDate": "2025-09-13T00:00:00.000Z",
         "location": "New York City, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://i.ytimg.com/vi/olr7boly_cg/maxresdefault.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Front Row Ticket",
                 "description": "Front-row seating for runway shows.",
-                "price": 2000,
-                "quantity": 500,
-                "start_date": "2025-04-01",
-                "end_date": "2025-08-31",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 2000000000,
+                "capacity": 500,
+                "startDate": "2025-04-01T00:00:00.000Z",
+                "endDate": "2025-08-31T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "General Admission",
                 "description": "Access to select shows and exhibitions.",
-                "price": 500,
-                "quantity": 1000,
-                "start_date": "2025-04-01",
-                "end_date": "2025-08-31",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 500000000,
+                "capacity": 1000,
+                "startDate": "2025-04-01T00:00:00.000Z",
+                "endDate": "2025-08-31T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "11",
-        "id": "11",
+        "eventId": 11,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Burning Man",
         "description": "A week-long annual event focusing on community, art, self-expression, and self-reliance.",
         "category": "Art",
-        "content": {
-            "id": "11",
-            "name": "Burning Man",
-            "description": "A week-long annual event focusing on community, art, self-expression, and self-reliance.",
-            "category": "Art"
-        },
-        "start_date": "2025-08-25",
-        "end_date": "2025-09-02",
+        "startDate": "2025-08-25T00:00:00.000Z",
+        "endDate": "2025-09-02T00:00:00.000Z",
         "location": "Black Rock Desert, Nevada, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://mybestplace.com/uploads/2017/10/Burning-Man-Festival-Nevada-SLIDER.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Main Event Ticket",
                 "description": "General admission to all areas and activities.",
-                "price": 575,
-                "quantity": 70000,
-                "start_date": "2025-01-01",
-                "end_date": "2025-08-01",
-                "terms_and_conditions": "Non-refundable after purchase."
+                "price": 575000000,
+                "capacity": 70000,
+                "startDate": "2025-01-01T00:00:00.000Z",
+                "endDate": "2025-08-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "13",
-        "id": "13",
+        "eventId": 13,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "SXSW (South by Southwest)",
         "description": "Annual conglomerate of parallel film, interactive media, and music festivals and conferences.",
         "category": "Conference",
-        "content": {
-            "id": "13",
-            "name": "SXSW",
-            "description": "Annual conglomerate of film, interactive media, and music festivals.",
-            "category": "Conference"
-        },
-        "start_date": "2025-03-07",
-        "end_date": "2025-03-16",
+        "startDate": "2025-03-07T00:00:00.000Z",
+        "endDate": "2025-03-16T00:00:00.000Z",
         "location": "Austin, Texas, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://s7d2.scene7.com/is/image/TWCNews/img_2555_03112022",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Interactive Badge",
                 "description": "Access to all Interactive panels, showcases, and exhibitions.",
-                "price": 1325,
-                "quantity": 5000,
-                "start_date": "2024-09-01",
-                "end_date": "2025-02-01",
-                "terms_and_conditions": "Non-refundable after February 1, 2025."
+                "price": 1325000000,
+                "capacity": 5000,
+                "startDate": "2024-09-01T00:00:00.000Z",
+                "endDate": "2025-02-01T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Music Badge",
                 "description": "Access to all music showcases and events.",
-                "price": 1050,
-                "quantity": 10000,
-                "start_date": "2024-09-01",
-                "end_date": "2025-02-01",
-                "terms_and_conditions": "Non-refundable after February 1, 2025."
+                "price": 1050000000,
+                "capacity": 10000,
+                "startDate": "2024-09-01T00:00:00.000Z",
+                "endDate": "2025-02-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "14",
-        "id": "14",
+        "eventId": 14,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Comic-Con International",
         "description": "The largest comic and popular arts convention in the world.",
         "category": "Convention",
-        "content": {
-            "id": "14",
-            "name": "Comic-Con",
-            "description": "The largest comic and popular arts convention in the world.",
-            "category": "Convention"
-        },
-        "start_date": "2025-07-17",
-        "end_date": "2025-07-21",
+        "startDate": "2025-07-17T00:00:00.000Z",
+        "endDate": "2025-07-21T00:00:00.000Z",
         "location": "San Diego, California, USA",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://www.comic-con.org/uploads/2023/10/museum-entrance-hero-1024x679-1.webp",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "4-Day Pass",
                 "description": "Access to all four days of Comic-Con events.",
-                "price": 230,
-                "quantity": 130000,
-                "start_date": "2024-11-01",
-                "end_date": "2025-06-15",
-                "terms_and_conditions": "Non-transferable. Refundable before June 1, 2025."
+                "price": 230000000,
+                "capacity": 130000,
+                "startDate": "2024-11-01T00:00:00.000Z",
+                "endDate": "2025-06-15T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "1-Day Pass",
                 "description": "Single day pass to Comic-Con.",
-                "price": 65,
-                "quantity": 35000,
-                "start_date": "2024-11-01",
-                "end_date": "2025-06-15",
-                "terms_and_conditions": "Non-transferable. Refundable before June 1, 2025."
+                "price": 65000000,
+                "capacity": 35000,
+                "startDate": "2024-11-01T00:00:00.000Z",
+                "endDate": "2025-06-15T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "16",
-        "id": "16",
+        "eventId": 16,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Edinburgh Fringe Festival",
         "description": "The world's largest arts festival, featuring thousands of performances across various genres.",
         "category": "Festival",
-        "content": {
-            "id": "16",
-            "name": "Edinburgh Fringe Festival",
-            "description": "The world's largest arts festival with various performances.",
-            "category": "Festival"
-        },
-        "start_date": "2025-08-01",
-        "end_date": "2025-08-25",
+        "startDate": "2025-08-01T00:00:00.000Z",
+        "endDate": "2025-08-25T00:00:00.000Z",
         "location": "Edinburgh, Scotland",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Edinburgh_Fringe_037.jpg/1200px-Edinburgh_Fringe_037.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Day Pass",
                 "description": "Access to all shows on a specific day.",
-                "price": 50,
-                "quantity": 10000,
-                "start_date": "2025-01-01",
-                "end_date": "2025-07-25",
-                "terms_and_conditions": "Refundable before July 1, 2025."
+                "price": 50000000,
+                "capacity": 10000,
+                "startDate": "2025-01-01T00:00:00.000Z",
+                "endDate": "2025-07-25T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Festival Pass",
                 "description": "Access to all shows during the entire festival.",
-                "price": 600,
-                "quantity": 5000,
-                "start_date": "2025-01-01",
-                "end_date": "2025-07-25",
-                "terms_and_conditions": "Refundable before July 1, 2025."
+                "price": 600000000,
+                "capacity": 5000,
+                "startDate": "2025-01-01T00:00:00.000Z",
+                "endDate": "2025-07-25T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "17",
-        "id": "17",
+        "eventId": 17,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Formula 1 Monaco Grand Prix",
         "description": "The most prestigious race in the Formula 1 calendar.",
         "category": "Sports",
-        "content": {
-            "id": "17",
-            "name": "Monaco Grand Prix",
-            "description": "The most prestigious race in the Formula 1 calendar.",
-            "category": "Sports"
-        },
-        "start_date": "2025-05-22",
-        "end_date": "2025-05-25",
+        "startDate": "2025-05-22T00:00:00.000Z",
+        "endDate": "2025-05-25T00:00:00.000Z",
         "location": "Monte Carlo, Monaco",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://www.visitmonaco.com/ImageRepository/GrandRdv/6538df78-40d6-464f-a550-30350c2dca11/Slider/7-mka-gpf-1-2022-samedi-208.jpg?Width=2500&Height=1250",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Grandstand Ticket",
                 "description": "Access to grandstand seating for the race.",
-                "price": 750,
-                "quantity": 35000,
-                "start_date": "2024-11-01",
-                "end_date": "2025-05-01",
-                "terms_and_conditions": "Non-refundable after April 1, 2025."
+                "price": 750000000,
+                "capacity": 35000,
+                "startDate": "2024-11-01T00:00:00.000Z",
+                "endDate": "2025-05-01T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Paddock Club Ticket",
                 "description": "Access to VIP seating, exclusive areas, and hospitality.",
-                "price": 4000,
-                "quantity": 5000,
-                "start_date": "2024-11-01",
-                "end_date": "2025-05-01",
-                "terms_and_conditions": "Non-refundable after April 1, 2025."
+                "price": 4000000000,
+                "capacity": 5000,
+                "startDate": "2024-11-01T00:00:00.000Z",
+                "endDate": "2025-05-01T00:00:00.000Z"
             }
         ]
     },
     {
-        "_id": "18",
-        "id": "18",
+        "eventId": 18,
+        "organizer": "6700f3aa798dc557f72ec630",
         "name": "Melbourne International Comedy Festival",
         "description": "One of the three largest comedy festivals in the world.",
         "category": "Comedy",
-        "content": {
-            "id": "18",
-            "name": "Melbourne Comedy Festival",
-            "description": "One of the largest comedy festivals in the world.",
-            "category": "Comedy"
-        },
-        "start_date": "2025-03-26",
-        "end_date": "2025-04-20",
+        "startDate": "2025-03-26T00:00:00.000Z",
+        "endDate": "2025-04-20T00:00:00.000Z",
         "location": "Melbourne, Australia",
-        "tickets": [
+        "metadataUrl": null,
+        "banner": "https://www.comedyfestival.com.au/theme/season/style/img/micf_share_2024.jpg",
+        "createdAt": "2024-10-01T00:00:00.000Z",
+        "updatedAt": "2024-10-01T00:00:00.000Z",
+        "ticketTypes": [
             {
-                "id": "1",
                 "name": "Festival Pass",
                 "description": "Access to all comedy shows during the festival.",
-                "price": 299,
-                "quantity": 10000,
-                "start_date": "2024-10-01",
-                "end_date": "2025-03-01",
-                "terms_and_conditions": "Non-refundable after March 1, 2025."
+                "price": 299000000,
+                "capacity": 10000,
+                "startDate": "2024-10-01T00:00:00.000Z",
+                "endDate": "2025-03-01T00:00:00.000Z"
             },
             {
-                "id": "2",
                 "name": "Day Pass",
                 "description": "Access to all shows on a specific day.",
-                "price": 70,
-                "quantity": 5000,
-                "start_date": "2024-10-01",
-                "end_date": "2025-03-01",
-                "terms_and_conditions": "Non-refundable after March 1, 2025."
+                "price": 70000000,
+                "capacity": 5000,
+                "startDate": "2024-10-01T00:00:00.000Z",
+                "endDate": "2025-03-01T00:00:00.000Z"
             }
         ]
     }
