@@ -97,6 +97,10 @@ def get_events_by_ids(
     event_ids: list,
 ):
     """use this tool to get the events by the event ids"""
+
+    if event_ids is None or len(event_ids) == 0:
+        return []
+
     request_session = session.get(
         f"{BASE_API_URL}/v1/events",
         params={
@@ -104,7 +108,7 @@ def get_events_by_ids(
         },
     )
     events = request_session.json()["data"]
-    
+
     print(events)
 
     return events

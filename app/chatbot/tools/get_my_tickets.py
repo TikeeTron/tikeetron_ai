@@ -19,7 +19,8 @@ def get_tickets_by_ids(
     user_address: str,
 ):
     """use this tool to get the tickets by the ticket ids"""
-    print(f"ticket_ids: {ticket_ids}")
+    if ticket_ids is None or len(ticket_ids) == 0:
+        return []
 
     request_session = session.get(
         f"{BASE_API_URL}/v1/tickets",
