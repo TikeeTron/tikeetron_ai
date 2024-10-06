@@ -127,6 +127,8 @@ def ask_agent(messages, user_address):
 3. For general queries (NFTs or Tikeetron info), call `get_to_know_tikeetron`.
 
 Present the event data clearly in your response and do not ask for clarification unless absolutely necessary. Ensure all responses are based on the provided data without introducing any fabricated information.
+
+Provide all responses in Markdown format.
                     """.strip(
                         "\n"
                     ),
