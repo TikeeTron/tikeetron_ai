@@ -75,7 +75,7 @@ def get_event_datas(events):
     Get the event data from the MongoDB Atlas database.
     """
     event_datas = []
-    event_ids = [event.id for event in events]
+    event_ids = [ObjectId(event.id) for event in events]
 
     for event in eventCollections.find({"_id": {"$in": event_ids}}):
         event_datas.append(event)
