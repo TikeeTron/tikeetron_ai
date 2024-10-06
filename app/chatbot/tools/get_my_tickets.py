@@ -1,44 +1,46 @@
-from typing import Optional, Type
+import os
+import requests
 
-from langchain_core.callbacks import (
-    AsyncCallbackManagerForToolRun,
-    CallbackManagerForToolRun,
-)
-from langchain_core.tools import BaseTool
-from pydantic import Field, BaseModel
+from langchain_core.tools import tool
+from langchain_core.runnables import RunnableConfig
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BASE_API_URL = os.getenv("BASE_API_URL")
+
+session = requests.Session()
+session.auth = (os.getenv("HTTP_BASIC_USER"), os.getenv("HTTP_BASIC_PASSWORD"))
 
 
-class GetMyTicketsInput(BaseModel):
-    user_id: str = Field(description="The user ID to get tickets for")
+@tool
+def get_my_tickets_tool(
+    config: RunnableConfig,
+):
+    """use this tool to get the tickets that the user has, only call this tool if the user asks for their tickets"""
+    user_address = config.get("configurable", {}).get("user_address")
 
+    request_session = session.get(
+        f"{BASE_API_URL}/v1/tickets",
+        params={
+            "buyerAddress": user_address,
+            "limit": 5,
+        },
+    )
 
-class GetMyTicketsTool(BaseTool):
-    name: str = "get_my_tickets"
-    description: str = "use this tool to get the tickets that the user has, only call this tool if the user asks for their tickets"
-    args_schema: Type[BaseModel] = GetMyTicketsInput
-    return_direct: bool = True
+    response = request_session.json()["data"]
 
-    def _run(
-        self,
-        input: GetMyTicketsInput,
-        run_manager: Optional[CallbackManagerForToolRun] = None,
-    ):
-        """Use the tool."""
-        print(input)
-        return {
-            "events": [
-                {
-                    "title": "Event 1",
-                    "description": "This is the first event",
-                    "date": "2021-01-01",
-                },
-            ]
-        }
+    formatted_response = []
+    for ticket in response:
+        formatted_response.append(
+            {
+                "ticketId": ticket["ticketId"],
+                "type": ticket["type"],
+                "eventName": ticket["event"]["name"],
+                "eventStartDate": ticket["event"]["startDate"],
+                "eventEndDate": ticket["event"]["endDate"],
+            }
+        )
 
-    def _arun(
-        self,
-        input: GetMyTicketsInput,
-        run_manager: Optional[AsyncCallbackManagerForToolRun] = None,
-    ):
-        """Use the tool asynchronously."""
-        return self._run(input, run_manager=run_manager.get_sync())
+    return formatted_response
