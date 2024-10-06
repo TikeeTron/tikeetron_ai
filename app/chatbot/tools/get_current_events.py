@@ -7,8 +7,19 @@ from langchain_groq import ChatGroq
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import format_document, PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
+import requests
 
 from app.chatbot.prompt.base_prompt import DOCUMENT_PROMPT
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+BASE_API_URL = os.getenv("BASE_API_URL")
+
+session = requests.Session()
+session.auth = (os.getenv("HTTP_BASIC_USER"), os.getenv("HTTP_BASIC_PASSWORD"))
+
 
 system_prompt = """
 Use the event data below to answer the user's question. Show id, name, and category. If no data is available, say, "No events found.". Do not ask for more clarification unless needed.
@@ -80,3 +91,20 @@ get_current_event_tool = rag_chain.as_tool(
     name="get_events",
     description="use this tool to get the current events, this tool is used vector search to find current events based on the query",
 )
+
+
+def get_events_by_ids(
+    event_ids: list,
+):
+    """use this tool to get the events by the event ids"""
+    request_session = session.get(
+        f"{BASE_API_URL}/v1/events",
+        params={
+            "eventIds[]": event_ids,
+        },
+    )
+    events = request_session.json()["data"]
+    
+    print(events)
+
+    return events

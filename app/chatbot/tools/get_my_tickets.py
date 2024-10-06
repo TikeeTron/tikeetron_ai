@@ -14,6 +14,25 @@ session = requests.Session()
 session.auth = (os.getenv("HTTP_BASIC_USER"), os.getenv("HTTP_BASIC_PASSWORD"))
 
 
+def get_tickets_by_ids(
+    ticket_ids: list,
+    user_address: str,
+):
+    """use this tool to get the tickets by the ticket ids"""
+    print(f"ticket_ids: {ticket_ids}")
+
+    request_session = session.get(
+        f"{BASE_API_URL}/v1/tickets",
+        params={
+            "ticketIds[]": ticket_ids,
+            "buyerAddress": user_address,
+        },
+    )
+    tickets = request_session.json()["data"]
+
+    return tickets
+
+
 @tool
 def get_my_tickets_tool(
     config: RunnableConfig,

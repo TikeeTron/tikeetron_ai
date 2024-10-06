@@ -16,7 +16,7 @@ class TicketResponse(BaseModel):
 class EventResponse(BaseModel):
     """Model for response of event"""
 
-    id: str
+    eventId: str
     name: str
     category: str
 
