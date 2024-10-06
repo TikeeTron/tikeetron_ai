@@ -34,7 +34,7 @@ def format_content(event: dict):
     Format the event content for display in the chatbot.
     """
     return {
-        "id": event.get("_id"),
+        "eventId": event.get("eventId"),
         "name": event.get("name"),
         "description": event.get("description"),
         "category": event.get("category"),
