@@ -9,9 +9,12 @@ from langchain_core.messages import HumanMessage
 
 
 from app.chatbot.model.response_model import AgentState, ToolResponse
-from app.chatbot.tools.get_my_tickets import get_my_tickets_tool
+from app.chatbot.tools.get_my_tickets import get_my_tickets_tool, get_tickets_by_ids
 from app.chatbot.tools.get_tikeetron import get_tikeetron_tool
-from app.chatbot.tools.get_current_events import get_current_event_tool
+from app.chatbot.tools.get_current_events import (
+    get_current_event_tool,
+    get_events_by_ids,
+)
 from app.events.crud import get_event_datas
 
 load_dotenv()
@@ -49,7 +52,7 @@ def respond(state: AgentState):
         [HumanMessage(content=state["messages"][-2].content)]
     )
 
-    if response.events and response.events[0].id:
+    if response.events and response.events[0].eventId:
         return {
             "events": response.events,
             "tickets": [],
@@ -122,7 +125,7 @@ def ask_agent(messages, user_address):
                 (
                     "system",
                     """You are Tikeetron Bot. Follow these rules:
-1. For event-related questions (e.g., "What events are happening?"), call `get_events`, retrieve the event ID, name, and category, and return the event name along with a brief description.
+1. For event-related questions (e.g., "What events are happening?"), call `get_events`, retrieve the eventId, name, and category, and return the event name along with a brief description.
 2. For ticket/transaction inquiries, call `get_my_tickets`.
 3. For general queries (NFTs or Tikeetron info), call `get_to_know_tikeetron`.
 
@@ -139,7 +142,7 @@ Provide all responses in Markdown format.
                 ),
             ],
         },
-        debug=True,
+        # debug=True,
     )
 
     print(response)
@@ -148,8 +151,13 @@ Provide all responses in Markdown format.
     if message != None:
         return {
             "message": message.content,
-            "events": get_events(response["events"]),
-            "tickets": response["tickets"],
+            "events": get_events_by_ids(
+                [event.eventId for event in response["events"]]
+            ),
+            "tickets": [
+                get_tickets_by_ids([ticket.ticketId], user_address)
+                for ticket in response["tickets"]
+            ],
         }
     else:
         return {
