@@ -1,6 +1,6 @@
 [
     {
-        "eventId": 1,
+        "eventId": 0,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Web Summit",
         "description": "One of the largest tech conferences in the world.",
@@ -32,7 +32,7 @@
         ]
     },
     {
-        "eventId": 2,
+        "eventId": 1,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Tomorrowland",
         "description": "The world’s biggest electronic music festival.",
@@ -64,7 +64,7 @@
         ]
     },
     {
-        "eventId": 3,
+        "eventId": 2,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Comic-Con San Diego",
         "description": "The largest convention of comics, movies, and pop culture.",
@@ -96,7 +96,7 @@
         ]
     },
     {
-        "eventId": 4,
+        "eventId": 3,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "SXSW (South by Southwest)",
         "description": "Annual conglomeration of film, interactive media, and music festivals.",
@@ -128,7 +128,7 @@
         ]
     },
     {
-        "eventId": 5,
+        "eventId": 4,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Coachella Valley Music and Arts Festival",
         "description": "One of the biggest music and arts festivals in the world.",
@@ -160,7 +160,7 @@
         ]
     },
     {
-        "eventId": 6,
+        "eventId": 5,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "The Met Gala",
         "description": "Annual fundraising gala for the Metropolitan Museum of Art's Costume Institute.",
@@ -184,7 +184,7 @@
         ]
     },
     {
-        "eventId": 7,
+        "eventId": 6,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Cannes Film Festival",
         "description": "Annual film festival held in Cannes, France.",
@@ -208,7 +208,7 @@
         ]
     },
     {
-        "eventId": 8,
+        "eventId": 7,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Wimbledon Tennis Championships",
         "description": "The oldest and most prestigious tennis tournament in the world.",
@@ -240,7 +240,7 @@
         ]
     },
     {
-        "eventId": 9,
+        "eventId": 8,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Oktoberfest",
         "description": "The world's largest Volksfest, combining a beer festival and a traveling funfair.",
@@ -264,7 +264,7 @@
         ]
     },
     {
-        "eventId": 10,
+        "eventId": 9,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "New York Fashion Week",
         "description": "One of the major fashion weeks held globally, showcasing upcoming fashion trends.",
@@ -296,7 +296,7 @@
         ]
     },
     {
-        "eventId": 11,
+        "eventId": 10,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Burning Man",
         "description": "A week-long annual event focusing on community, art, self-expression, and self-reliance.",
@@ -320,7 +320,7 @@
         ]
     },
     {
-        "eventId": 13,
+        "eventId": 12,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "SXSW (South by Southwest)",
         "description": "Annual conglomerate of parallel film, interactive media, and music festivals and conferences.",
@@ -352,7 +352,7 @@
         ]
     },
     {
-        "eventId": 14,
+        "eventId": 13,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Comic-Con International",
         "description": "The largest comic and popular arts convention in the world.",
@@ -384,7 +384,7 @@
         ]
     },
     {
-        "eventId": 16,
+        "eventId": 14,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Edinburgh Fringe Festival",
         "description": "The world's largest arts festival, featuring thousands of performances across various genres.",
@@ -416,7 +416,7 @@
         ]
     },
     {
-        "eventId": 17,
+        "eventId": 15,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Formula 1 Monaco Grand Prix",
         "description": "The most prestigious race in the Formula 1 calendar.",
@@ -448,7 +448,7 @@
         ]
     },
     {
-        "eventId": 18,
+        "eventId": 16,
         "organizer": "6700f3aa798dc557f72ec630",
         "name": "Melbourne International Comedy Festival",
         "description": "One of the three largest comedy festivals in the world.",
