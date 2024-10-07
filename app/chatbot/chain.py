@@ -154,10 +154,10 @@ Provide all responses in Markdown format.
             "events": get_events_by_ids(
                 [event.eventId for event in response["events"]]
             ),
-            "tickets": [
-                get_tickets_by_ids([ticket.ticketId], user_address)
-                for ticket in response["tickets"]
-            ],
+            "tickets": get_tickets_by_ids(
+                [ticket.ticketId for ticket in response["tickets"]],
+                user_address,
+            ),
         }
     else:
         return {
