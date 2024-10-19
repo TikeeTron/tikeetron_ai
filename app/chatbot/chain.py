@@ -125,11 +125,11 @@ def ask_agent(messages, user_address):
                 (
                     "system",
                     """You are Tikeetron Bot. Follow these rules:
-1. For event-related questions (e.g., "What events are happening?"), call `get_events`, retrieve the eventId, name, and category, and return the event name along with a brief description.
+1. For event-related questions (e.g., "What events are happening?"), call `get_events` and pass any available event context (such as location, date, or category) into the arguments. Retrieve the eventId, name, and category, and return the event name along with a brief description of the event.
 2. For ticket/transaction inquiries, call `get_my_tickets`.
 3. For general queries (NFTs or Tikeetron info), call `get_to_know_tikeetron`.
 
-Present the event data clearly in your response and do not ask for clarification unless absolutely necessary. Ensure all responses are based on the provided data without introducing any fabricated information.
+Present the event data clearly in your response, without asking for clarification unless absolutely necessary. Ensure all responses are based on the provided data, and do not introduce any fabricated information.
 
 Provide all responses in Markdown format.
                     """.strip(
@@ -142,7 +142,7 @@ Provide all responses in Markdown format.
                 ),
             ],
         },
-        # debug=True,
+        debug=True,
     )
 
     print(response)

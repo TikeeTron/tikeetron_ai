@@ -89,7 +89,7 @@ rag_chain = (
 
 get_current_event_tool = rag_chain.as_tool(
     name="get_events",
-    description="use this tool to get the current events, this tool is used vector search to find current events based on the query",
+    description="use this tool to get the events, pass the question to the parameter",
 )
 
 
