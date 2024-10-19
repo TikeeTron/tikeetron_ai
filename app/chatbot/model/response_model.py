@@ -9,6 +9,7 @@ class TicketResponse(BaseModel):
     ticketId: int
     type: str
     eventName: str
+    eventDescription: str
     eventStartDate: str
     eventEndDate: str
 

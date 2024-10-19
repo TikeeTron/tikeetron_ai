@@ -57,6 +57,7 @@ def get_my_tickets_tool(
             {
                 "ticketId": ticket["ticketId"],
                 "type": ticket["type"],
+                "eventDescription": ticket["event"]["description"],
                 "eventName": ticket["event"]["name"],
                 "eventStartDate": ticket["event"]["startDate"],
                 "eventEndDate": ticket["event"]["endDate"],
