@@ -26,7 +26,7 @@ tools = [
 ]
 
 llm = ChatGroq(
-    model="llama3-70b-8192",
+    model="llama-3.2-90b-text-preview",
     temperature=0,
     max_tokens=None,
     timeout=None,
