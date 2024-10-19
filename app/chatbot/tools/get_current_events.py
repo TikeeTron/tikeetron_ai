@@ -50,7 +50,7 @@ vectorstore = MongoDBAtlasVectorSearch.from_connection_string(
 retriever = vectorstore.as_retriever(
     search_type="similarity",
     search_kwargs={
-        "k": 2,
+        "k": 6,
         "filters": {
             "$or": [
                 {"start_date": {"$gte": "now"}},
