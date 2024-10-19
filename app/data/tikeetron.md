@@ -16,9 +16,9 @@ The current system revolves around two key user groups—**customers** and **org
 
 ---
 
-### 2. **Key Features of Tikeetron**
+## 2. **Key Features of Tikeetron**
 
-#### 2.1 **For Customers**
+### 2.1 **For Customers**
 
 Tikeetron offers several powerful tools to ensure smooth and secure ticket purchases, wallet management, and event discovery. Here are the main features available today:
 
@@ -40,7 +40,7 @@ Tikeetron offers several powerful tools to ensure smooth and secure ticket purch
 
 - **QR Code Scanning for Ticket Validation**: Customers can scan QR codes to validate their tickets at event entrances, streamlining the check-in process and reducing fraud.
 
-#### 2.2 **For Organizers**
+### 2.2 **For Organizers**
 
 Tikeetron also offers essential tools for event organizers, allowing them to manage their events efficiently and ensure that tickets are validated securely:
 
@@ -50,7 +50,7 @@ Tikeetron also offers essential tools for event organizers, allowing them to man
 
 ---
 
-### 3. **Future Features**
+## 3. **Future Features**
 
 Tikeetron has laid the groundwork for a comprehensive platform, but additional features are in development to further improve both the customer and organizer experiences:
 
@@ -62,7 +62,7 @@ Tikeetron has laid the groundwork for a comprehensive platform, but additional f
 
 ---
 
-### 4. **AI-Driven Personalization**
+## 4. **AI-Driven Personalization**
 
 One of Tikeetron’s most unique features is its AI-first approach, which enhances the user experience by providing a conversational interface. Users can interact with the AI-powered chatbot to explore available events, check ticket statuses, and even inquire about specific event details. This system is built to offer personalized recommendations, making the event discovery process smoother and more engaging.
 
@@ -73,47 +73,47 @@ For example, if a user frequently attends music festivals, the AI engine will pr
 
 
 
-### 5. **TRON Blockchain Integration**
+## 5. **TRON Blockchain Integration**
 
-#### 5.1 **Why TRON?**
+### 5.1 **Why TRON?**
 
 TRON was chosen as the blockchain for Tikeetron due to its high throughput and efficiency. TRON's decentralized ecosystem supports a wide range of decentralized applications (dApps) and is highly scalable, making it ideal for a ticketing platform that requires high transaction speeds and low fees.
 
-#### 5.2 **TRON Tokens for Payments**
+### 5.2 **TRON Tokens for Payments**
 
 In Tikeetron, users can purchase event tickets using TRON tokens. This ensures that transactions are quick, low-cost, and borderless. TRON tokens also offer flexibility for tokenized loyalty programs or rewards, allowing event organizers to incentivize users with token-based promotions.
 
-#### 5.3 **Smart Contracts for Event Ticketing**
+### 5.3 **Smart Contracts for Event Ticketing**
 
 Smart contracts enable automated and trustless interactions between parties. When a user buys a ticket on Tikeetron, a smart contract automatically governs the terms of the sale. This ensures that the ticket is securely transferred to the buyer and that the transaction is recorded on the blockchain.
 
-#### 5.4 **Immutable Records**
+### 5.4 **Immutable Records**
 
 Blockchain technology ensures that once a ticket is sold, the transaction is permanently recorded and cannot be altered. This creates an immutable and transparent ticketing system where users and organizers can verify transactions at any time.
 
-### 6. **ERC-721 Standard Implementation on Shasta Testnet**
+## 6. **ERC-721 Standard Implementation on Shasta Testnet**
 
 Tikeetron implements the ERC-721 standard, widely recognized for managing non-fungible tokens (NFTs), on the Shasta Testnet. By using ERC-721, Tikeetron brings a unique approach to event ticketing, where each ticket is represented as an NFT on the blockchain. This ensures that each ticket is unique, traceable, and non-interchangeable, aligning perfectly with the nature of event tickets, which often have varying levels of access, prices, and perks.
 
-#### 6.1 **NFT Functionality**
+### 6.1 **NFT Functionality**
 
 By leveraging ERC-721, Tikeetron transforms event tickets into non-fungible tokens. This allows users to have full ownership of their tickets, which can be resold or transferred securely without the risk of duplication or fraud. The ERC-721 tokens also make it easy to add additional features like ticket upgrades, access to special areas, or personalized experiences that can be linked directly to an individual NFT.
 
-#### 6.2 **Smart Contracts for Ticket Operations**
+### 6.2 **Smart Contracts for Ticket Operations**
 
 The smart contract that powers the ticketing functionality ensures that all ticketing operations, including sales, transfers, and event attendance validation, are automated and transparent. Once a ticket is issued, the smart contract governs its lifecycle, ensuring that transfers, ownership rights, and attendance rights are clearly defined and executed without the need for intermediaries.
 
-#### 6.3 **Off-Chain Backend for Metadata Storage**
+### 6.3 **Off-Chain Backend for Metadata Storage**
 
 To improve the performance of data querying and ensure a smooth user experience, Tikeetron maintains an off-chain backend that stores metadata about events and tickets created on the blockchain. While the blockchain securely handles ownership and transaction data, storing additional information like event descriptions, ticket tiers, and images off-chain helps optimize load times and allows for more detailed data to be accessible to users without clogging the blockchain.
 
-#### 6.4 **Ticket Validation with QR Codes**
+### 6.4 **Ticket Validation with QR Codes**
 
 QR code-based ticket validation is integrated into the app. At the event, users can scan their QR codes, which are linked to the corresponding NFT or smart contract on the TRON blockchain. This ensures that the tickets are valid and that the process is quick and secure.
 
 ---
 
-### 7. **Tikeetron’s Unique Selling Proposition**
+## 7. **Tikeetron’s Unique Selling Proposition**
 
 Tikeetron stands out from traditional ticketing platforms due to its use of AI and blockchain technologies. Here’s why it’s different:
 
@@ -127,17 +127,17 @@ Tikeetron stands out from traditional ticketing platforms due to its use of AI a
 
 ---
 
-### 8. **Tikeetron’s Impact on Event Management**
+## 8. **Tikeetron’s Impact on Event Management**
 
 Tikeetron’s use of AI and blockchain technologies positions it as a transformative force in the event management space. For customers, the AI-first interface enhances how they discover and purchase tickets, offering a personalized experience unmatched by traditional platforms. For organizers, the app simplifies the ticket management and validation process, reducing the risk of fraud and improving operational efficiency.
 
 ---
 
-### 9. **Business Model**
+## 9. **Business Model**
 
 Tikeetron operates on a simple, transparent business model designed to benefit both event organizers and attendees while ensuring the platform's sustainability and growth. The primary revenue stream for Tikeetron is derived from a **3% transaction fee** on every ticket sold through the platform. 
 
-#### 9.1 **Revenue Structure**
+### 9.1 **Revenue Structure**
 
 - **Ticket Sales Commission (3% Fee)**: 
    Tikeetron charges a 3% fee on the total value of each ticket sold. This fee is automatically deducted during the ticket transaction process and is applied equally to all ticket types, whether for small events or large-scale concerts and festivals.
@@ -146,21 +146,50 @@ Tikeetron operates on a simple, transparent business model designed to benefit b
 
 ---
 
-### 10. **Refund Policy**
+## 10. **Refund Policy**
 
 Tikeetron operates on a **no-refund policy** for all ticket purchases made through the platform. Due to the nature of blockchain transactions and the use of NFTs for ticketing, all sales are considered final once the transaction is confirmed on the TRON blockchain. 
 
-#### 10.1 **Why We Don’t Offer Refunds**
+### 10.1 **Why We Don’t Offer Refunds**
 
 - **Immutable Blockchain Transactions**: All tickets on Tikeetron are issued as NFTs on the TRON blockchain. Once a transaction is completed, it cannot be reversed or altered, ensuring the security and integrity of the ticketing process.
   
 - **Fraud Prevention**: Allowing refunds on blockchain-based tickets could open the door to fraudulent activity, such as transferring tickets to another user and then requesting a refund. Our no-refund policy helps maintain a safe and secure environment for both attendees and event organizers.
 
-#### 10.2 **Ticket Transfers Instead of Refunds**
+### 10.2 **Ticket Transfers Instead of Refunds**
 
 While refunds are not available, Tikeetron offers an easy and secure **ticket transfer** system. If a customer is unable to attend an event, they can transfer their ticket to another user through the app. This ensures that the value of the ticket is retained, and it allows another person to attend the event.
 
 This alternative provides flexibility for users while maintaining the integrity of the ticketing system. 
+
+--- 
+
+## 11. **AI Architecture**
+
+The Tikeetron AI system is designed to power the event marketplace app with advanced personalization, seamless user interaction, and real-time event recommendations. Below is an overview of the architecture and components involved:
+
+### 11.1 **Core Components**:
+
+- **Llama3 for NLP**: We use **Llama3**, an advanced large language model (LLM), as the backbone for understanding and generating human-like text. Llama3 is responsible for interpreting user queries, engaging in dialogue, and delivering recommendations in natural language.
+  
+- **Retrieval-Augmented Generation (RAG)**: To ensure that user responses are accurate and up-to-date, we combine Llama3 with **RAG**, where data is fetched dynamically from a **MongoDB** vector store. RAG ensures that the AI can provide real-time event and ticketing information, without relying on static pre-trained knowledge. This approach enables context-aware and dynamic responses to user questions.
+
+- **MongoDB with Vector Search**: Event and ticket data are stored as vectors in **MongoDB**, allowing for fast retrieval of information. The vectorized data enables the AI to match user queries with relevant events or tickets based on user preferences, historical data, and metadata.
+
+- **LangChain and LangGraph**: These frameworks handle conversation logic, decision trees, and recommendation pipelines. **LangChain** organizes complex interactions, while **LangGraph** structures event and ticket data, linking them to user interaction histories and preferences. This helps in generating contextually aware responses and personalized event suggestions.
+
+### 11.2 **Workflow Overview**:
+
+1. **User Input**: The AI receives user queries or commands (e.g., asking for event recommendations).
+2. **Vector Search**: Relevant data (e.g., event details, ticket availability) is retrieved from MongoDB using RAG.
+3. **AI Processing**: Llama3 processes the query, aided by **LangChain** to manage conversation flow.
+4. **Personalized Response**: The system generates a personalized response, often a recommendation or specific information, based on retrieved vector data and user preferences.
+
+### 11.3 **Scalability & Performance**:
+
+- **GROQ Integration**: For speed and performance, we leverage **LangChain-GROQ** to run heavy AI computations efficiently. This allows for rapid processing and low-latency responses, especially when dealing with large-scale user queries or extensive event data.
+
+---
 
 ## Conclusion
 
